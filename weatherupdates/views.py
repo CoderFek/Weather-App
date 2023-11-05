@@ -38,7 +38,8 @@ def index(request):
                 'country_code': response['sys']['country'],
                 'wind': 'Wind: ' + str(response['wind']['speed']) + 'km/h',
                 'humidity': 'Humidity: ' + str(response['main']['humidity']) + '%',
-                'time': f"{format_time} {result}"
+                'time': format_time,
+                'timezone' : result
             }
         else:
             city_weather_update = {}

@@ -21,7 +21,8 @@
         <div class="card">
             <div class="card-body">
                 <img src="http://openweathermap.org/img/w/{{ city_weather_update.icon }}.png" alt="">
-                <div class="card-text float-end">{{ city_weather_update.time }}</div>
+                <div class="card-text float-end">{{ city_weather_update.time }}</div><br>
+                <div class="card-text float-end">{{ city_weather_update.timezone }}</div>
                 <div class="card-text"><h5>{{ city_weather_update.city }} {{ city_weather_update.country_code }}</h5></div>
                 <div class="card-text"><h6>{{ city_weather_update.temperature }}</h6></div>
                 <div class="card-text"><h6>{{ city_weather_update.description | title }}</h6></div>
