@@ -11,7 +11,7 @@ from datetime import datetime
 def index(request):
     try:
         if request.method == 'POST':
-            API_KEY = 'f07253201d848e3d31aa62925f3db822'
+            API_KEY = 'Your API key here...'
             
             #getting the city name from the form input
             city_name = request.POST.get('city')
