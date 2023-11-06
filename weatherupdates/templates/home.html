@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row justify-content-center my-5">
     <div class="col-md-5">
-        <div class="mt-4 p-5 bg-success text-white rounded mb-3">
+        <div class="shadow p-3 mt-4 p-5 bg-dark text-white rounded mb-3">
             <h1>Weather Update App</h1>
         </div>
         <form action="." method="POST">
@@ -11,7 +11,7 @@
           <div class="input-group">
             <input type="text" required class="form-control" name="city" placeholder="Search City.......">
             <div class="input-group-append">
-              <button class="btn btn-success" type="submit">
+              <button class="btn btn-secondary" type="submit">
                 Search
               </button>
             </div>
@@ -19,7 +19,7 @@
         </form>
         <hr>
         <div class="card">
-            <div class="card-body">
+            <div class="shadow p-3 card-body">
                 <img src="http://openweathermap.org/img/w/{{ city_weather_update.icon }}.png" alt="">
                 <div class="card-text float-end">{{ city_weather_update.time }}</div><br>
                 <div class="card-text float-end">{{ city_weather_update.timezone }}</div>
