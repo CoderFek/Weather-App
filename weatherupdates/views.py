@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from timezonefinder import TimezoneFinder
-from geopy.geocoders import Nominatim
+from geopy.geocoders import Photon
 import requests
 import pytz
 from datetime import datetime
@@ -9,7 +9,7 @@ from datetime import datetime
 # Create your views here.
 
 def index(request):
-    try:
+    # try:
         if request.method == 'POST':
             API_KEY = 'f07253201d848e3d31aa62925f3db822'
             
@@ -17,7 +17,7 @@ def index(request):
             city_name = request.POST.get('city')
 
             #locating the city
-            geolocator = Nominatim(user_agent="geoapiExercises")
+            geolocator = Photon(user_agent="geoapiExercises")
             location = geolocator.geocode(city_name)
             obj = TimezoneFinder()
             result = obj.timezone_at(lng=location.longitude, lat=location.latitude)
@@ -46,5 +46,5 @@ def index(request):
 
         context = {'city_weather_update': city_weather_update}
         return render(request, 'home.html', context)
-    except:
-        return render(request, '404.html')
+    # except:
+    #     return render(request, '404.html')
