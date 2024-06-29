@@ -9,7 +9,7 @@ from datetime import datetime
 # Create your views here.
 
 def index(request):
-    # try:
+    try:
         if request.method == 'POST':
             API_KEY = 'f07253201d848e3d31aa62925f3db822'
             
@@ -46,5 +46,5 @@ def index(request):
 
         context = {'city_weather_update': city_weather_update}
         return render(request, 'home.html', context)
-    # except:
-    #     return render(request, '404.html')
+    except:
+        return render(request, '404.html')
